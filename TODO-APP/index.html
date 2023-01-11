@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO-App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="todo-header">
+      <div class="container">
+        <h1>Day</h1>
+        <form action="" id="todo-form">
+          <input type="text" name="task-name" placeholder="e.g Launch Time" />
+          <button type="submit">Add Task</button>
+        </form>
+      </div>
+    </header>
+    <div>
+      <div class="container" id="todo-content">
+        <ul class="stats">
+          <li>
+            <span>Remaining</span>
+            <span id="remaining-tasks">0</span>
+          </li>
+          <li>
+            <span>Completed</span>
+            <span id="completed-tasks">0</span>
+          </li>
+          <li>
+            <span>All</span>
+            <span id="total-tasks">0</span>
+          </li>
+        </ul>
+        <ul class="todos"></ul>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p>30 Days of Javascript by Ojochogwu</p>
+      </div>
+    </footer>
+    <script src="App.js"></script>
+  </body>
+</html>
