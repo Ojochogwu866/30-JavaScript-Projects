@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  flex-direction: column;
+  padding: 0;
+  height: auto;
+  margin: 0;
+  background-color: black;
+}
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  border-radius: 4px;
+  margin-top: 50px;
+  height: 70%;
+  background-color: rgba(3, 40, 121, 0.847);
+  color: white;
+  padding: 20px;
+}
+form {
+  width: 100%;
+}
