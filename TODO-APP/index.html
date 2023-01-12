@@ -13,32 +13,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header id="todo-header">
+    <header id="main-header">
       <div class="container">
-        <h1>Day</h1>
+        <h1>TODAY</h1>
         <form action="" id="todo-form">
-          <input type="text" name="task-name" placeholder="e.g Launch Time" />
+          <input
+            type="text"
+            name="task-name"
+            placeholder="e.g Launch Time"
+            autofocus
+          />
           <button type="submit">Add Task</button>
         </form>
       </div>
     </header>
     <div>
-      <div class="container" id="todo-content">
+      <div class="container" id="main-content">
         <ul class="stats">
           <li>
-            <span>Remaining</span>
-            <span id="remaining-tasks">0</span>
+            <span class="task">Remaining</span>
+            <span class="count" id="remaining-tasks">0</span>
           </li>
           <li>
-            <span>Completed</span>
-            <span id="completed-tasks">0</span>
+            <span class="task">Completed</span>
+            <span class="count" id="completed-tasks">0</span>
           </li>
           <li>
-            <span>All</span>
-            <span id="total-tasks">0</span>
+            <span class="task">All</span>
+            <span class="count" id="total-tasks">0</span>
           </li>
         </ul>
-        <ul class="todos"></ul>
+        <ul class="todo">
+          <li class="todos"></li>
+        </ul>
       </div>
     </div>
     <footer>

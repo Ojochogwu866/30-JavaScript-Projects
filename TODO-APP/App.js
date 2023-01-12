@@ -1,10 +1,10 @@
+//DOM ELEMENTS
 const todoForm = document.querySelector("#todo-form");
 const todoList = document.querySelector(".todos");
 const allTasks = document.querySelector("#total-tasks");
 const remainingTasks = document.querySelector("#remaining-tasks");
 const completedTasks = document.querySelector("#completed-tasks");
 const mainInput = document.querySelector("#todo-form input");
-
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 if (localStorage.getItem("tasks")) {
@@ -14,9 +14,10 @@ if (localStorage.getItem("tasks")) {
 }
 
 todoForm.addEventListener("submit", (e) => {
-  const inputValue = mainInput.value;
+  e.preventDefault();
 
-  if ((inputValue = "")) {
+  const inputValue = mainInput.value;
+  if (inputValue == "") {
     return;
   }
 
@@ -94,7 +95,7 @@ function countTasks() {
 }
 
 function removeTask(taskId) {
-  tasks = tasks.filter((task) => task.id != parseInt(taskId));
+  tasks = tasks.filter((task) => task.id !== parseInt(taskId));
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
 
