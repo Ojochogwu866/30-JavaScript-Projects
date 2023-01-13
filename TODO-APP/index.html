@@ -13,46 +13,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header id="main-header">
+    <div class="section">
+      <div class="layer1"></div>
       <div class="container">
-        <h1>TODAY</h1>
-        <form action="" id="todo-form">
-          <input
-            type="text"
-            name="task-name"
-            placeholder="e.g Launch Time"
-            autofocus
-          />
-          <button type="submit">Add Task</button>
-        </form>
-      </div>
-    </header>
-    <div>
-      <div class="container" id="main-content">
-        <ul class="stats">
-          <li>
-            <span class="task">Remaining</span>
-            <span class="count" id="remaining-tasks">0</span>
-          </li>
-          <li>
-            <span class="task">Completed</span>
-            <span class="count" id="completed-tasks">0</span>
-          </li>
-          <li>
-            <span class="task">All</span>
-            <span class="count" id="total-tasks">0</span>
-          </li>
-        </ul>
-        <ul class="todo">
-          <li class="todos"></li>
-        </ul>
+        <header class="header" id="main-header">
+          <h1>TODAY</h1>
+          <form action="" id="todo-form">
+            <input
+              type="text"
+              name="task-name"
+              placeholder="e.g Launch Time"
+              autofocus
+            />
+            <button type="submit">Add Task</button>
+          </form>
+        </header>
+        <div>
+          <div id="main-content">
+            <div class="stats">
+              <div>
+                <span class="task">Remaining</span>
+                <span class="count" id="remaining-tasks">0</span>
+              </div>
+              <div>
+                <span class="task">Completed</span>
+                <span class="count" id="completed-tasks">0</span>
+              </div>
+              <div>
+                <span class="task">All</span>
+                <span class="count" id="total-tasks">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="todos"></div>
+        </div>
+        <footer>
+          <div class="footer">
+            <p>30 Javascript Apps by Ojochogwu</p>
+          </div>
+        </footer>
       </div>
     </div>
-    <footer>
-      <div class="container">
-        <p>30 Days of Javascript by Ojochogwu</p>
-      </div>
-    </footer>
     <script src="App.js"></script>
   </body>
 </html>

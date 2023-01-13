@@ -74,13 +74,12 @@ function createTask(task) {
     <input type="checkbox" name="tasks" id="${task.id}" ${
     task.isCompleted ? "checked" : ""
   }>
-    <span ${!task.isCompleted ? "contenteditable" : ""}>${task.name}</span> 
+    <span ${!task.isCompleted ? "contenteditable" : ""}>${task.name}</span>
+    <button title="Remove "${task.name}" task" class="remove-task"></button> 
   </div>
-  <button title="Remove "${task.name}" task" class="remove-task"></button>
   `;
 
   taskEl.innerHTML = taskElMarkup;
-
   todoList.appendChild(taskEl);
 }
 
@@ -96,11 +95,8 @@ function countTasks() {
 
 function removeTask(taskId) {
   tasks = tasks.filter((task) => task.id !== parseInt(taskId));
-
   localStorage.setItem("tasks", JSON.stringify(tasks));
-
   document.getElementById(taskId).remove();
-
   countTasks();
 }
 
@@ -114,7 +110,6 @@ function updateTask(taskId, el) {
     const parent = el.closest("li");
 
     task.isCompleted = !task.isCompleted;
-
     if (task.isCompleted) {
       span.removeAttribute("contenteditable");
       parent.classList.add("complete");
