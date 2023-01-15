@@ -100,12 +100,56 @@ form button {
   align-items: baseline;
   justify-content: baseline;
 }
-.todos {
+.todos li {
   list-style: none;
   background-color: #bae8e42a;
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 40px 20px 40px 20px;
+  padding: 20px 10px;
+  border-radius: 6px;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.todos li div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.todos li.complete {
+  background-color: palegoldenrod;
+  text-decoration: line-through;
+}
+input[type="checkbox"] {
+  background-color: transparent;
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #102222;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+  appearance: none;
+  transition: 0.2s ease-in;
+}
+input[type="checkbox"]::before {
+  background-color: rgb(110, 192, 178);
+  transform: scale(0);
+  transition: 0.2s ease-in;
+}
+input[type="checkbox"]:checked {
+  background-color: rgb(110, 192, 178);
+  border-color: rgb(110, 192, 178);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.todos button {
+  border-radius: 6px;
+  border: 0px solid;
+  padding: 4px 6px;
+  background-color: rgb(74, 3, 3);
+  color: white;
 }

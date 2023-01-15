@@ -56,15 +56,12 @@ todoList.addEventListener("Keydown", (e) => {
 
 todoList.addEventListener("input", (e) => {
   const taskId = e.target.closest("li").id;
-
   updateTask(taskId, e.target);
 });
 
 function createTask(task) {
   const taskEl = document.createElement("li");
-
   taskEl.setAttribute("id", task.id);
-
   if (task.isCompleted) {
     taskEl.classList.add("complete");
   }
@@ -75,10 +72,11 @@ function createTask(task) {
     task.isCompleted ? "checked" : ""
   }>
     <span ${!task.isCompleted ? "contenteditable" : ""}>${task.name}</span>
-    <button title="Remove "${task.name}" task" class="remove-task"></button> 
   </div>
+    <button title="Remove the "${
+      task.name
+    }" task" class="remove-task">Delete</button> 
   `;
-
   taskEl.innerHTML = taskElMarkup;
   todoList.appendChild(taskEl);
 }
