@@ -74,7 +74,7 @@ form button {
 .stats {
   display: flex;
 }
-.stats div {
+.stats li {
   list-style: none;
   display: flex;
   margin: 20px;
@@ -82,12 +82,12 @@ form button {
   font-weight: 400;
   color: white;
 }
-.stats div .task {
+.stats li .task {
   background: #ff9d6829;
   border-radius: 2px;
   padding: 5px;
 }
-.stats div .count {
+.stats li .count {
   background: #6acfc771;
   border-radius: 2px;
   padding: 5px;
