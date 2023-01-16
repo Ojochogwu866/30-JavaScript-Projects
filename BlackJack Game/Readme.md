@@ -1,5 +1,5 @@
 Project 1.
-
 BlackJack Game.
-Build a Blackjack game. Improve your knowledge in Javascript by building a real-time web based project.
-Making use oj HTML, CSS and JAVASCRIPT
+
+Learn Javascript for begginners by building a BlackJack game.
+Build real-web projects by making additional use of your knowledge in HTML, CSS and Javascript
