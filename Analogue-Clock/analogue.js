@@ -8,7 +8,8 @@ setInterval(() => {
   let hh = day.getHours() * 30;
   let mm = day.getMinutes() * deg;
   let ss = day.getSeconds() * deg;
-  hourHand.style.transform = `rotateZ(${hh + mm / 12}deg)`;
-  minuteHand.style.transform = `rotateZ(${mm}deg)`;
-  secondsHand.style.transform = `rotateZ(${ss}deg)`;
+
+  hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+  mn.transform = `rotateZ(${mm}deg)`;
+  sc.style.transform = `rotateZ(${ss}deg)`;
 });
